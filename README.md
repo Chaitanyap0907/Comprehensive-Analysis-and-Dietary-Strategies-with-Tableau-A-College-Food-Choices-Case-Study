@@ -19,6 +19,33 @@ python app.py
 
 Open `http://127.0.0.1:5000`.
 
+## Push To GitHub
+
+```bash
+git add .
+git commit -m "Prepare Flask Tableau project for deployment"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git push -u origin main
+```
+
+If the remote already exists, use:
+
+```bash
+git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git push -u origin main
+```
+
+## Deploy On Render
+
+1. Push the project to GitHub.
+2. Open Render and create a **New Web Service**.
+3. Connect the GitHub repository.
+4. Use these settings:
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `gunicorn app:app`
+5. Deploy the service.
+
 ## Tableau Embed
 
 Publish your Tableau workbook to Tableau Public, copy the dashboard/story embed URL, and replace `YOUR_TABLEAU_PUBLIC_VIEW_URL` in `templates/index.html`.
