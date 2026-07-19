@@ -1,45 +1,120 @@
-# Comprehensive Analysis and Dietary Strategies with Tableau: A College Food Choices Case Study
+# Comprehensive Analysis and Dietary Strategies with Tableau
+
+## A College Food Choices Case Study
+
+## Team Members
+
+| Name | Role |
+|---|---|
+| Undrakonda Avinash Sai | Team Lead |
+| Madagala Chaitanya Sravanthi | Member |
+| CHAITHANYA GUPTHA PADMANABUNI | Member |
+| Samminga Prema Raju | Member |
+| Burreddy Shanmukha Veera Sai | Member |
 
 ## 1. Introduction
 
-This applied analytics project explores dietary habits, academic performance, and lifestyle choices among college students. The goal is to transform survey data into meaningful Tableau visuals that help students, cafeteria managers, nutritionists, and university support teams make evidence-based wellness decisions.
+This project presents a data analytics case study on college students' food choices, dietary habits, lifestyle patterns, and health-related behaviors. The analysis was completed using Tableau to convert raw survey data into meaningful visual insights. The project helps identify how breakfast habits, comfort food reasons, exercise, cooking frequency, eating out, fruit and vegetable intake, vitamin usage, and food preferences relate to student health and wellbeing.
 
 ## 2. Problem Statement
 
-College students often face irregular schedules, stress, limited food budgets, and academic pressure. These factors can lead to skipped breakfast, frequent fast-food consumption, low fruit and vegetable intake, and stress-related comfort eating. The project investigates these patterns and presents actionable dietary strategies through Tableau dashboards and a guided story.
+College students often experience irregular schedules, academic pressure, limited budgets, and changing lifestyle habits. These factors can lead to skipped meals, unhealthy snacking, frequent eating out, low fruit and vegetable intake, and comfort-food consumption due to boredom or stress. The purpose of this project is to analyze these behaviors and recommend practical dietary strategies for healthier student living.
 
-## 3. Dataset Acquisition
+## 3. Objectives
 
-The finalized dataset is saved as `data/college_food_choices_final.csv`. It contains 120 student records across 41 variables covering GPA, gender, grade level, weight, breakfast choices, calorie awareness, comfort-food reasons, exercise, cooking frequency, eating out frequency, cuisine preferences, fruit and vegetable intake, vitamin consumption, and health category.
+- To analyze college students' food choice patterns using Tableau.
+- To study the relationship between diet habits and health category.
+- To compare breakfast habits, cooking frequency, eating out, and comfort food reasons.
+- To identify food preference trends among students.
+- To build an interactive Tableau dashboard and story for easy interpretation.
+- To suggest practical dietary strategies for students and campus food services.
 
-## 4. Data Preparation
+## 4. Dataset Description
 
-The data preparation phase focused on cleaning, structuring, and validating the dataset before Tableau import. Null values were removed, categorical labels were standardized, survey scale fields were kept numeric, and calculated analytical fields were mapped for dashboard use. The dataset was verified as complete and ready for visualization.
+The dataset used in this project is stored as `data/college_food_choices_final.csv`. It contains 120 student records and 41 variables. The major fields include student ID, gender, grade level, GPA, weight, breakfast, calories per day, calorie awareness, healthy feeling, life rewarding score, comfort food reason, cooking frequency, eating out frequency, exercise, fruit intake, vegetable intake, vitamin usage, cuisine preferences, current diet, and health category.
 
-## 5. Tableau Calculated Fields
+## 5. Tools and Technologies Used
 
-Two calculated fields were used for dynamic analysis. `Consumption` switches between vegetables per day, vitamins, and fruit per day using Parameter 2. `Food Selection` switches between Thai, Italian, Persian, Greek, and Indian food preference scores using Parameter 3.
+- Tableau Public/Desktop for data visualization
+- CSV dataset for structured data analysis
+- GitHub for project submission and version control
+- Flask website scaffold for presenting or embedding the Tableau dashboard
 
-## 6. Visualizations Created
+## 6. Data Preparation
 
-The Tableau workbook includes a KPI summary card, breakfast consumption bar chart, eating out versus cooking frequency line chart, health category by gender grouped bar chart, vitamins consumption by gender line chart, health versus food consumption grouped bar chart, healthy feeling and life rewarding bubble chart, weight versus exercise treemap, and comfort food reasons bubble chart.
+The data preparation process included checking column names, validating data types, standardizing categorical values, and confirming that the dataset was ready for Tableau import. Numeric survey-scale fields were maintained as numeric values, while categorical fields such as gender, breakfast type, comfort food reason, favorite cuisine, current diet, and health category were treated as dimensions.
 
-## 7. Dashboard Integration
+## 7. Tableau Workbook
 
-The dashboard integrates all major visuals into a single Food Choice Analysis canvas. Parameter controls allow users to filter by consumption type and food category. This makes the dashboard useful for comparing student subgroups and identifying behavior patterns quickly.
+The Tableau workbook is available in the project folder as `tableau/Food_Choice_Analysis.twb`. It connects to the cleaned dataset and supports dashboard creation for the College Food Choices case study.
 
-## 8. Story Development
+Calculated fields used in Tableau:
 
-The Tableau Story presents findings as a guided narrative. It begins with comfort-food reasons, then moves to breakfast and dietary patterns, health categories, life satisfaction indicators, and finally the combined dashboard. This structure makes the analysis accessible to non-technical users.
+### Consumption
 
-## 9. Key Insights
+```tableau
+IF [Parameter 2] = "veggies_day" THEN [veggies_day]
+ELSEIF [Parameter 2] = "vitamins" THEN [vitamins]
+ELSE [fruit_day]
+END
+```
 
-Students who maintain regular breakfast habits and balanced diets generally show stronger indicators of health and academic focus. Comfort-food consumption is strongly connected with boredom, sadness, and stress. Fruit and vegetable consumption is comparatively low, while eating out remains common. These findings support cafeteria improvements such as salad bars, affordable balanced meal combos, and healthier late-evening options.
+### Food Selection
 
-## 10. Recommendations
+```tableau
+IF [Parameter 3] = "thai_food" THEN [thai_food]
+ELSEIF [Parameter 3] = "italian_food" THEN [italian_food]
+ELSEIF [Parameter 3] = "persian_food" THEN [persian_food]
+ELSEIF [Parameter 3] = "greek_food" THEN [greek_food]
+ELSE [indian_food]
+END
+```
 
-Students should be encouraged to eat quick nutritious breakfasts, reduce late-night junk food, and choose fruits or home-cooked meals during stressful periods. Universities can support these behaviors through awareness campaigns, nutrition counseling, and cafeteria menu redesign. Cafeteria managers should increase access to fresh produce, balanced meal combos, and clearly labeled calorie-aware choices.
+## 8. Visualizations Created
 
-## 11. Conclusion
+The project includes the following Tableau visualizations:
 
-The project demonstrates how Tableau can convert student food-choice data into practical insights. By connecting dietary patterns with wellbeing and academic focus, the dashboard and story provide a clear foundation for student wellness interventions.
+- KPI summary showing student count, average GPA, average weight, and average grade level
+- Breakfast consumption chart
+- Eating out versus cooking frequency analysis
+- Health category by gender chart
+- Vitamins, fruit, and vegetable consumption comparison
+- Health category versus food preference analysis
+- Healthy feeling and life rewarding score visualization
+- Weight versus exercise frequency analysis
+- Comfort food reasons visualization
+
+## 9. Dashboard Description
+
+The main dashboard, titled Food Choice Analysis, combines important charts into one interactive view. It helps users quickly understand student eating patterns, health categories, food preferences, comfort-food behavior, and lifestyle indicators. Parameter controls allow the user to switch between different consumption and cuisine preference measures.
+
+## 10. Key Insights
+
+- Breakfast habits are an important indicator of student dietary routine.
+- Comfort-food consumption is commonly connected with boredom, sadness, or stress.
+- Students who cook more frequently may have better control over their food choices.
+- Eating out frequency can indicate possible dependence on fast food or convenience meals.
+- Fruit, vegetable, and vitamin consumption patterns show opportunities for nutrition awareness.
+- Health category differences help identify groups that may benefit from targeted dietary guidance.
+
+## 11. Recommendations
+
+- Encourage students to eat simple and nutritious breakfasts.
+- Promote affordable balanced meal options in college cafeterias.
+- Increase awareness about fruit, vegetable, and vitamin intake.
+- Provide healthier alternatives for comfort-food cravings.
+- Conduct nutrition awareness programs for students.
+- Improve cafeteria menus with calorie-aware and balanced meal labels.
+- Encourage cooking skills and simple home-style meal preparation among students.
+
+## 12. Conclusion
+
+This project demonstrates how Tableau can be used to convert student food-choice data into useful insights. The dashboard and story help explain dietary patterns, lifestyle habits, and health-related trends among college students. The analysis supports practical dietary strategies that can improve student wellness, food awareness, and healthier decision-making.
+
+## 13. Project Files
+
+- Dataset: `data/college_food_choices_final.csv`
+- Tableau workbook: `tableau/Food_Choice_Analysis.twb`
+- Tableau build guide: `tableau/tableau_build_guide.md`
+- Project report: `docs/project_report.md`
+- Video script: `docs/video_script.md`
