@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook source-build='2024.2.0 (20242.24.0628.0000)' source-platform='win' version='18.1' xml:base='https://tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SemanticRoleUserVisible.true...SemanticRoleUserVisible />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='College Food Choices' inline='true' name='college_food_choices' version='18.1'>
+      <connection class='textscan' directory='../data' filename='college_food_choices_final.csv' password='' server=''>
+        <relation connection='textscan.1' name='college_food_choices_final.csv' table='college_food_choices_final.csv' type='table' />
+        <cols header='yes' locale='en_US' separator=',' />
+      </connection>
+      <column caption='Student ID' datatype='string' name='[student_id]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Grade Level' datatype='integer' name='[grade_level]' role='dimension' type='ordinal' />
+      <column caption='GPA' datatype='real' name='[GPA]' role='measure' type='quantitative' />
+      <column caption='Weight' datatype='integer' name='[weight]' role='measure' type='quantitative' />
+      <column caption='Breakfast' datatype='string' name='[breakfast]' role='dimension' type='nominal' />
+      <column caption='Calories Day' datatype='integer' name='[calories_day]' role='measure' type='quantitative' />
+      <column caption='Calorie Awareness' datatype='integer' name='[calorie_awareness]' role='measure' type='quantitative' />
+      <column caption='Healthy Feeling' datatype='integer' name='[healthy_feeling]' role='measure' type='quantitative' />
+      <column caption='Life Rewarding' datatype='integer' name='[life_rewarding]' role='measure' type='quantitative' />
+      <column caption='Comfort Food Reason' datatype='string' name='[comfort_food_reason]' role='dimension' type='nominal' />
+      <column caption='Comfort Food' datatype='string' name='[comfort_food]' role='dimension' type='nominal' />
+      <column caption='Cook' datatype='integer' name='[cook]' role='measure' type='quantitative' />
+      <column caption='Eating Out' datatype='integer' name='[eating_out]' role='measure' type='quantitative' />
+      <column caption='Exercise' datatype='integer' name='[exercise]' role='measure' type='quantitative' />
+      <column caption='Fruit Day' datatype='integer' name='[fruit_day]' role='measure' type='quantitative' />
+      <column caption='Veggies Day' datatype='integer' name='[veggies_day]' role='measure' type='quantitative' />
+      <column caption='Vitamins' datatype='integer' name='[vitamins]' role='measure' type='quantitative' />
+      <column caption='Fries' datatype='integer' name='[fries]' role='measure' type='quantitative' />
+      <column caption='Sports' datatype='integer' name='[sports]' role='measure' type='quantitative' />
+      <column caption='Employment' datatype='integer' name='[employment]' role='dimension' type='ordinal' />
+      <column caption='Income' datatype='integer' name='[income]' role='dimension' type='ordinal' />
+      <column caption='On/Off Campus' datatype='integer' name='[on_off_campus]' role='dimension' type='ordinal' />
+      <column caption='Pay Meal Out' datatype='integer' name='[pay_meal_out]' role='measure' type='quantitative' />
+      <column caption='Coffee' datatype='integer' name='[coffee]' role='dimension' type='ordinal' />
+      <column caption='Soup' datatype='integer' name='[soup]' role='dimension' type='ordinal' />
+      <column caption='Drink' datatype='integer' name='[drink]' role='dimension' type='ordinal' />
+      <column caption='Favorite Cuisine' datatype='string' name='[fav_cuisine]' role='dimension' type='nominal' />
+      <column caption='Greek Food' datatype='integer' name='[greek_food]' role='measure' type='quantitative' />
+      <column caption='Indian Food' datatype='integer' name='[indian_food]' role='measure' type='quantitative' />
+      <column caption='Italian Food' datatype='integer' name='[italian_food]' role='measure' type='quantitative' />
+      <column caption='Thai Food' datatype='integer' name='[thai_food]' role='measure' type='quantitative' />
+      <column caption='Persian Food' datatype='integer' name='[persian_food]' role='measure' type='quantitative' />
+      <column caption='Marital Status' datatype='integer' name='[marital_status]' role='dimension' type='ordinal' />
+      <column caption='Parents Cook' datatype='integer' name='[parents_cook]' role='measure' type='quantitative' />
+      <column caption='Mother Education' datatype='integer' name='[mother_education]' role='dimension' type='ordinal' />
+      <column caption='Father Education' datatype='integer' name='[father_education]' role='dimension' type='ordinal' />
+      <column caption='Self Perception Weight' datatype='integer' name='[self_perception_weight]' role='measure' type='quantitative' />
+      <column caption='Nutritional Check' datatype='integer' name='[nutritional_check]' role='measure' type='quantitative' />
+      <column caption='Current Diet' datatype='string' name='[diet_current]' role='dimension' type='nominal' />
+      <column caption='Health Category' datatype='string' name='[health_category]' role='dimension' type='nominal' />
+      <column caption='Consumption Selector' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='"fruit_day"'>
+        <calculation class='tableau' formula='"fruit_day"' />
+        <members>
+          <member value='"fruit_day"' />
+          <member value='"veggies_day"' />
+          <member value='"vitamins"' />
+        </members>
+      </column>
+      <column caption='Food Preference Selector' datatype='string' name='[Parameter 3]' param-domain-type='list' role='measure' type='nominal' value='"indian_food"'>
+        <calculation class='tableau' formula='"indian_food"' />
+        <members>
+          <member value='"indian_food"' />
+          <member value='"greek_food"' />
+          <member value='"italian_food"' />
+          <member value='"thai_food"' />
+          <member value='"persian_food"' />
+        </members>
+      </column>
+      <column caption='Consumption' datatype='integer' name='[Consumption]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameter 2] = "veggies_day" THEN [veggies_day] ELSEIF [Parameter 2] = "vitamins" THEN [vitamins] ELSE [fruit_day] END' />
+      </column>
+      <column caption='Food Selection' datatype='integer' name='[Food Selection]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameter 3] = "thai_food" THEN [thai_food] ELSEIF [Parameter 3] = "italian_food" THEN [italian_food] ELSEIF [Parameter 3] = "persian_food" THEN [persian_food] ELSEIF [Parameter 3] = "greek_food" THEN [greek_food] ELSE [indian_food] END' />
+      </column>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='KPI Summary'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='College Food Choices' name='college_food_choices' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <mark class='Text' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{11111111-1111-1111-1111-111111111111}' />
+    </worksheet>
+    <worksheet name='Breakfast Consumption'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='College Food Choices' name='college_food_choices' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[college_food_choices].[breakfast]</rows>
+        <cols>COUNT([college_food_choices].[student_id])</cols>
+      </table>
+      <simple-id uuid='{22222222-2222-2222-2222-222222222222}' />
+    </worksheet>
+    <worksheet name='Health Category by Gender'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='College Food Choices' name='college_food_choices' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[college_food_choices].[health_category]</rows>
+        <cols>COUNT([college_food_choices].[student_id])</cols>
+      </table>
+      <simple-id uuid='{33333333-3333-3333-3333-333333333333}' />
+    </worksheet>
+    <worksheet name='Eating Out vs Cooking'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='College Food Choices' name='college_food_choices' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>AVG([college_food_choices].[eating_out])</rows>
+        <cols>AVG([college_food_choices].[cook])</cols>
+      </table>
+      <simple-id uuid='{44444444-4444-4444-4444-444444444444}' />
+    </worksheet>
+    <worksheet name='Food Preference Health View'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='College Food Choices' name='college_food_choices' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[college_food_choices].[health_category]</rows>
+        <cols>AVG([college_food_choices].[Food Selection])</cols>
+      </table>
+      <simple-id uuid='{55555555-5555-5555-5555-555555555555}' />
+    </worksheet>
+    <worksheet name='Comfort Food Reasons'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='College Food Choices' name='college_food_choices' />
+          </datasources>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <mark class='Circle' />
+          </pane>
+        </panes>
+        <rows>[college_food_choices].[comfort_food_reason]</rows>
+        <cols>COUNT([college_food_choices].[student_id])</cols>
+      </table>
+      <simple-id uuid='{66666666-6666-6666-6666-666666666666}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Food Choice Analysis'>
+      <style />
+      <size maxheight='850' maxwidth='1200' minheight='850' minwidth='1200' />
+      <zones>
+        <zone h='850' id='1' type='layout-basic' w='1200' x='0' y='0'>
+          <zone h='70' id='2' type='text' w='1200' x='0' y='0'>
+            <formatted-text>
+              <run fontcolor='#1f2937' fontsize='24' fontweight='bold'>College Food Choices: Dietary Strategy Dashboard</run>
+            </formatted-text>
+          </zone>
+          <zone h='250' id='3' name='Breakfast Consumption' type='worksheet' w='570' x='20' y='90' />
+          <zone h='250' id='4' name='Health Category by Gender' type='worksheet' w='570' x='610' y='90' />
+          <zone h='250' id='5' name='Eating Out vs Cooking' type='worksheet' w='570' x='20' y='370' />
+          <zone h='250' id='6' name='Food Preference Health View' type='worksheet' w='570' x='610' y='370' />
+          <zone h='170' id='7' name='Comfort Food Reasons' type='worksheet' w='1160' x='20' y='650' />
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <stories>
+    <story name='College Dietary Strategy Story'>
+      <style />
+      <story-points>
+        <story-point caption='Comfort food reasons reveal emotional and boredom-driven eating.' />
+        <story-point caption='Breakfast and balanced routines support academic focus.' />
+        <story-point caption='Health category patterns highlight intervention opportunities.' />
+        <story-point caption='Wellbeing indicators connect healthy feeling with life rewarding scores.' />
+        <story-point caption='Dashboard summary guides campus dietary strategies.' />
+      </story-points>
+    </story>
+  </stories>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Food Choice Analysis'>
+      <viewpoints>
+        <viewpoint name='Breakfast Consumption' />
+        <viewpoint name='Health Category by Gender' />
+        <viewpoint name='Eating Out vs Cooking' />
+        <viewpoint name='Food Preference Health View' />
+        <viewpoint name='Comfort Food Reasons' />
+      </viewpoints>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Food Choice Analysis' width='192' />
+  </thumbnails>
+</workbook>
