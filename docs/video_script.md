@@ -2,7 +2,7 @@
 
 ## Opening
 
-Hello, my name is [Your Name], and this project is titled Comprehensive Analysis and Dietary Strategies with Tableau: A College Food Choices Case Study.
+Hello, my name is Undrakonda Avinash, and this project is titled Comprehensive Analysis and Dietary Strategies with Tableau: A College Food Choices Case Study.
 
 ## Problem Statement
 
